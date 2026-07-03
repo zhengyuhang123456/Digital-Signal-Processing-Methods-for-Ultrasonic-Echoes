@@ -41,6 +41,7 @@ function run_gui()
     update_simulation(current_snr);
     
     % --- Callback Function ---
+    % update_simulation: Recalculates and redraws plots based on new SNR
     function update_simulation(snr_val)
         lbl.Text = sprintf('Target SNR: %d dB', round(snr_val));
         
