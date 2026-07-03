@@ -30,6 +30,7 @@ function denoised_signal = tv_denoising(noisy_signal, lambda, num_iter)
     
     % Using Chambolle's algorithm (Dual formulation) for 1D TV
     % Minimizing ||x - y||^2 + lambda*||Dx||_1
+    % This handles piecewise constant signals effectively.
     
     p = zeros(N-1, 1); % Dual variable
     tau_dual = 0.25;
