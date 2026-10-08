@@ -29,7 +29,7 @@ order = 4;
 bpf_signal = bandpass_filter(noisy_signal, fs, f_low, f_high, order);
 
 % 3.2 Tikhonov Regularization
-fprintf(['Applying Tikhonov Regularization...\n');
+fprintf('Applying Tikhonov Regularization...\n');
 lambda_tikhonov = 2.0;% Regularization parameter
 tikhonov_signal = tikhonov_regularization(noisy_signal, lambda_tikhonov);
 
